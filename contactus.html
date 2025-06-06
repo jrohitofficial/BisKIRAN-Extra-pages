@@ -1,0 +1,2528 @@
+<!DOCTYPE html><html lang="en"><head>
+	<meta charset="UTF-8">
+	<title>Contact Us – BisKIRAN TECHNOLOGIES</title>
+	<meta name="description" content="BisKIRAN TECHNOLOGIES - Get in touch with our team">
+	<meta name="keywords" content="contact, AI, software, technology, Nepal, Australia, digital solutions, innovation, cloud, machine learning, healthtech">
+	<meta name="author" content="BisKIRAN TECHNOLOGIES">
+	<link rel="shortcut icon" href="../assets/img/logo/f-icon.png" type="image/x-icon">
+	<!-- Mobile Specific Meta -->
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+	<link rel="stylesheet" href="../assets/css/fontawesome.css">
+	<link rel="stylesheet" href="../assets/css/animate.css">
+	<link rel="stylesheet" href="../assets/css/global.css">
+	<link rel="stylesheet" href="../assets/css/swiper.min.css">
+	<link rel="stylesheet" href="../assets/css/magnific-popup.css">
+	<link rel="stylesheet" href="../assets/css/style.css">	<style>
+		/* 
+		 * Contact Page Custom Styles
+		 * 
+		 * This stylesheet implements a dark matte glassmorphism design with glowing elements
+		 * and gradient accents based on the company's brand colors.
+		 * The design features:
+		 * - Matte dark semi-transparent backgrounds (rgba(13, 17, 28, 0.65))
+		 * - Subtle gradient effects (cyan #43CEF2 to purple #6C40F9)
+		 * - Glowing orbs in background for visual interest
+		 * - Floating animations for enhanced user experience
+		 * - Light content on dark backgrounds for better readability
+		 */
+		 
+		/* Fix for extra space after footer */
+		body {
+			margin: 0;
+			padding: 0;
+			overflow-x: hidden;
+		}
+		html, body {
+			height: auto;
+			min-height: 100%;
+		}
+		#bi-footer-2 {
+			margin-bottom: 0;
+		}
+		
+		/* Global Glassmorphism Effects */
+		.glassmorphism {
+			backdrop-filter: blur(10px);
+			-webkit-backdrop-filter: blur(10px);
+			background: rgba(255, 255, 255, 0.2);
+			border: 1px solid rgba(255, 255, 255, 0.18);
+			box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+		}
+				/* Enhanced Contact Info Box Styles */
+		.contact-info-box {
+			padding: 35px 25px;
+			background: rgba(248, 249, 250, 0.2);
+			border-radius: 18px;
+			transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+			height: 100%;
+			backdrop-filter: blur(10px);
+			-webkit-backdrop-filter: blur(10px);
+			border: 1px solid rgba(255, 255, 255, 0.2);
+			box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+			position: relative;
+			z-index: 1;
+			text-align: center;
+		}
+		.contact-info-box::before {
+			content: '';
+			position: absolute;
+			inset: 0;
+			border-radius: 18px;
+			padding: 2px;
+			background: linear-gradient(135deg, rgba(255,255,255,0.3), rgba(255,255,255,0.1));			-webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+			mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+			-webkit-mask-composite: xor;
+			mask-composite: exclude;
+			z-index: -1;
+			opacity: 0;
+			transition: opacity 0.4s ease;
+		}
+		.contact-info-box:hover {
+			box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+			transform: translateY(-8px);
+			background: rgba(248, 249, 250, 0.25);
+		}
+		.contact-info-box:hover::before {
+			opacity: 1;
+		}		.contact-info-icon {
+			width: 70px;
+			height: 70px;
+			background: var(--base-color);
+			border-radius: 50%;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			margin: 0 auto 25px;
+			box-shadow: 0 8px 25px rgba(0, 0, 0, 0.25);
+			position: relative;
+			transition: transform 0.3s ease, box-shadow 0.3s ease;
+		}		.contact-info-box:hover .contact-info-icon {
+			transform: scale(1.1) translateY(-5px);
+			box-shadow: 0 15px 35px rgba(0, 0, 0, 0.35);
+		}
+		.contact-info-icon::after {
+			content: '';
+			position: absolute;
+			inset: -3px;
+			border-radius: 50%;
+			background: linear-gradient(135deg, rgba(255,255,255,0.8), rgba(255,255,255,0));
+			opacity: 0.3;
+			z-index: -1;
+		}
+		.contact-info-icon i {
+			color: #fff;
+			font-size: 26px;
+			filter: drop-shadow(0 2px 3px rgba(0,0,0,0.2));
+			transition: transform 0.3s ease;
+		}
+		.contact-info-box:hover .contact-info-icon i {
+			transform: scale(1.1);
+		}		/* Enhanced Matte Glassmorphism Contact Form */
+		.contact-form-wrapper {
+			background: rgba(13, 17, 28, 0.65);
+			border-radius: 20px;
+			overflow: hidden;
+			box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.35);
+			backdrop-filter: blur(20px);
+			-webkit-backdrop-filter: blur(20px);
+			border: 1px solid rgba(255, 255, 255, 0.08);
+			position: relative;
+			transition: transform 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275), 
+						box-shadow 0.5s ease,
+						border-color 0.5s ease;
+			z-index: 10;
+		}
+		
+		.contact-form-wrapper:hover {
+			transform: translateY(-5px) scale(1.01);
+			box-shadow: 0 25px 50px 0 rgba(0, 0, 0, 0.4), 
+						0 0 0 1px rgba(67, 206, 242, 0.2);
+			border-color: rgba(108, 64, 249, 0.15);
+		}
+		
+		.contact-form-wrapper::before {
+			content: '';
+			position: absolute;
+			top: -15px;
+			left: -15px;
+			right: -15px;
+			bottom: -15px;
+			background: linear-gradient(135deg, 
+				rgba(67, 206, 242, 0.4) 0%, 
+				rgba(108, 64, 249, 0.4) 33%, 
+				rgba(211, 71, 214, 0.4) 66%,
+				rgba(255, 184, 108, 0.4) 100%);
+			z-index: -1;
+			border-radius: 35px;
+			filter: blur(18px);
+			opacity: 0.6;
+			animation: formGlowEnhanced 12s ease-in-out infinite;
+		}
+		
+		.contact-form-wrapper::after {
+			content: '';
+			position: absolute;
+			inset: 0;
+			background: rgba(13, 17, 28, 0.3);
+			border-radius: 20px;
+			z-index: -1;
+			backdrop-filter: blur(8px);
+			-webkit-backdrop-filter: blur(8px);
+		}
+		
+		.glass-effect {
+			position: absolute;
+			inset: 0;
+			background: linear-gradient(135deg, rgba(255,255,255,0.09) 0%, rgba(255,255,255,0.03) 100%);
+			z-index: 0;
+			pointer-events: none;
+			border-radius: 20px;
+			overflow: hidden;
+		}
+		
+		.glass-effect::after {
+			content: '';
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 150%;
+			height: 100%;
+			background: radial-gradient(
+				ellipse at 50% 0%, 
+				rgba(255,255,255,0.18) 0%, 
+				rgba(255,255,255,0.08) 30%, 
+				transparent 70%
+			);
+			transform: translateX(-25%);
+			animation: lightSheen 8s ease-in-out infinite alternate;
+		}
+		
+		.glass-effect::before {
+			content: '';
+			position: absolute;
+			inset: 0;
+			background-image: 
+				url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11 18c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm48 25c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm-43-7c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm63 31c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM34 90c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3z' fill='rgba(255,255,255,0.04)' fill-rule='evenodd'/%3E%3C/svg%3E"),
+				linear-gradient(135deg, rgba(67, 206, 242, 0.03) 0%, rgba(108, 64, 249, 0.03) 100%);
+			opacity: 0.6;
+			z-index: -1;
+			animation: patternFade 10s infinite alternate;
+		}
+		
+		/* Enhanced glass surface effect with reflection */
+		.glass-surface {
+			position: absolute;
+			inset: 0;
+			border-radius: 20px;
+			overflow: hidden;
+			z-index: 1;
+			pointer-events: none;
+		}
+		
+		.glass-reflection {
+			position: absolute;
+			top: -100%;
+			left: -100%;
+			width: 250%;
+			height: 200%;
+			background: linear-gradient(
+				40deg,
+				transparent 0%,
+				rgba(255, 255, 255, 0.06) 30%,
+				rgba(255, 255, 255, 0.12) 48%,
+				rgba(255, 255, 255, 0.04) 49%,
+				transparent 100%
+			);
+			transform: rotate(15deg);
+			animation: reflectionMove 10s linear infinite;
+		}
+		
+		@keyframes reflectionMove {
+			0% { transform: translateX(-50%) translateY(10%) rotate(15deg); }
+			100% { transform: translateX(50%) translateY(-10%) rotate(15deg); }
+		}
+		
+		@keyframes lightSheen {
+			0% { transform: translateX(-25%); opacity: 0.5; }
+			100% { transform: translateX(0%); opacity: 0.8; }
+		}
+		
+		@keyframes patternFade {
+			0%, 100% { opacity: 0.3; }
+			50% { opacity: 0.6; }
+		}
+		
+		/* More intense glow animation for form */
+		@keyframes formGlowEnhanced {
+			0% { 
+				opacity: 0.5; 
+				filter: blur(18px); 
+				transform: scale(0.985); 
+				background-position: 0% 0%;
+			}
+			33% { 
+				opacity: 0.6; 
+				filter: blur(24px); 
+				transform: scale(1.0);
+				background-position: 50% 50%; 
+			}
+			66% { 
+				opacity: 0.7; 
+				filter: blur(30px); 
+				transform: scale(1.015); 
+				background-position: 100% 100%;
+			}
+			100% { 
+				opacity: 0.5; 
+				filter: blur(18px); 
+				transform: scale(0.985); 
+				background-position: 0% 0%;
+			}
+		}
+		
+		/* Background Glowing Orbs */
+		.glowing-orbs {
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			overflow: hidden;
+			z-index: -2;
+		}
+		
+		.orb {
+			position: absolute;
+			border-radius: 50%;
+			filter: blur(50px);
+			opacity: 0.5;
+			animation: floatOrb 20s infinite alternate ease-in-out;
+		}
+		
+		.orb-1 {
+			width: 300px;
+			height: 300px;
+			background: radial-gradient(circle at 30% 30%, rgba(94, 73, 184, 0.8), rgba(67, 61, 155, 0.5));
+			top: -10%;
+			left: -5%;
+			animation-duration: 25s;
+		}
+		
+		.orb-2 {
+			width: 350px;
+			height: 350px;
+			background: radial-gradient(circle at 70% 40%, rgba(67, 206, 242, 0.8), rgba(24, 90, 157, 0.5));
+			bottom: -20%;
+			right: -8%;
+			animation-duration: 30s;
+			animation-delay: 2s;
+		}
+				.orb-3 {
+			width: 200px;
+			height: 200px;
+			background: radial-gradient(circle at 50% 50%, rgba(211, 71, 214, 0.7), rgba(148, 56, 255, 0.4));
+			top: 60%;
+			left: 10%;
+			animation-duration: 22s;
+			animation-delay: 5s;
+		}
+		
+		.orb-4 {
+			width: 180px;
+			height: 180px;
+			background: radial-gradient(circle at 60% 40%, rgba(255, 184, 108, 0.7), rgba(242, 140, 67, 0.5));
+			top: 40%;
+			right: 15%;
+			animation-duration: 28s;
+			animation-delay: 3s;
+		}
+		
+		@keyframes floatOrb {
+			0% { transform: translate(0, 0) rotate(0deg); filter: blur(50px); }
+			33% { transform: translate(3%, 2%) rotate(2deg); filter: blur(60px); }
+			66% { transform: translate(-2%, 3%) rotate(-1deg); filter: blur(55px); }
+			100% { transform: translate(1%, -2%) rotate(1deg); filter: blur(50px); }
+		}
+		
+		@keyframes glow {
+			0% { opacity: 0.4; filter: blur(15px); }
+			50% { opacity: 0.6; filter: blur(20px); }
+			100% { opacity: 0.4; filter: blur(15px); }
+		}
+				/* Stars and Message Bubbles Animation - Enhanced */
+		.stars-container {
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			overflow: hidden;
+			z-index: 1;
+			pointer-events: none;
+		}
+		
+		.star {
+			position: absolute;
+			border-radius: 50%;
+			filter: drop-shadow(0 0 12px rgba(255,255,255,0.9));
+			animation: floatStar 15s linear infinite;
+			opacity: 0.7;
+			background: radial-gradient(circle at center, rgba(255,255,255,1) 0%, rgba(255,255,255,0.7) 70%, rgba(255,255,255,0.3) 100%);
+		}
+		
+		.star-1 {
+			width: 4px;
+			height: 4px;
+			top: 15%;
+			left: 15%;
+			animation-duration: 20s;
+			filter: drop-shadow(0 0 10px rgba(67, 206, 242, 0.9));
+		}
+		
+		.star-2 {
+			width: 6px;
+			height: 6px;
+			top: 25%;
+			left: 75%;
+			animation-duration: 18s;
+			animation-delay: 2s;
+			filter: drop-shadow(0 0 12px rgba(108, 64, 249, 0.9));
+		}
+		
+		.star-3 {
+			width: 5px;
+			height: 5px;
+			top: 55%;
+			left: 10%;
+			animation-duration: 25s;
+			animation-delay: 5s;
+			filter: drop-shadow(0 0 10px rgba(67, 206, 242, 0.9));
+		}
+		
+		.star-4 {
+			width: 3px;
+			height: 3px;
+			top: 65%;
+			left: 85%;
+			animation-duration: 22s;
+			animation-delay: 1s;
+			filter: drop-shadow(0 0 12px rgba(108, 64, 249, 0.9));
+		}
+		
+		.star-5 {
+			width: 4px;
+			height: 4px;
+			top: 85%;
+			left: 45%;
+			animation-duration: 19s;
+			animation-delay: 3s;
+			filter: drop-shadow(0 0 10px rgba(67, 206, 242, 0.9));
+		}
+		
+		.star-6 {
+			width: 5px;
+			height: 5px;
+			top: 35%;
+			left: 90%;
+			animation-duration: 21s;
+			animation-delay: 4s;
+			filter: drop-shadow(0 0 12px rgba(108, 64, 249, 0.9));
+		}
+		
+		.star-7 {
+			width: 3px;
+			height: 3px;
+			top: 22%;
+			left: 32%;
+			animation-duration: 17s;
+			animation-delay: 1s;
+			filter: drop-shadow(0 0 10px rgba(67, 206, 242, 0.9));
+		}
+		
+		.star-8 {
+			width: 4px;
+			height: 4px;
+			top: 75%;
+			left: 22%;
+			animation-duration: 19s;
+			animation-delay: 3s;
+			filter: drop-shadow(0 0 12px rgba(108, 64, 249, 0.9));
+		}
+		
+		.star-9 {
+			width: 6px;
+			height: 6px;
+			top: 15%;
+			left: 60%;
+			animation-duration: 24s;
+			animation-delay: 2s;
+			filter: drop-shadow(0 0 10px rgba(67, 206, 242, 0.9));
+		}
+		
+		.star-10 {
+			width: 3px;
+			height: 3px;
+			top: 45%;
+			left: 70%;
+			animation-duration: 16s;
+			animation-delay: 4s;
+			filter: drop-shadow(0 0 12px rgba(108, 64, 249, 0.9));
+		}
+		
+		.star-11 {
+			width: 5px;
+			height: 5px;
+			top: 80%;
+			left: 80%;
+			animation-duration: 22s;
+			animation-delay: 6s;
+			filter: drop-shadow(0 0 10px rgba(67, 206, 242, 0.9));
+		}
+		
+		.star-12 {
+			width: 4px;
+			height: 4px;
+			top: 60%;
+			left: 35%;
+			animation-duration: 20s;
+			animation-delay: 5s;
+			filter: drop-shadow(0 0 12px rgba(108, 64, 249, 0.9));
+		}
+				/* Enhanced sparkle stars with dynamic effects */
+		.star-sparkle {
+			position: absolute;
+			width: 10px;
+			height: 10px;
+			background: transparent;
+			opacity: 0.9;
+			animation: sparkle 4s linear infinite;
+			z-index: 2;
+		}
+		
+		.star-sparkle::before, .star-sparkle::after {
+			content: '';
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+		}
+		
+		.star-sparkle::before {
+			width: 100%;
+			height: 2px;
+			background: linear-gradient(90deg, transparent, rgba(255,255,255,0.8), transparent);
+			animation: sparkleHorizontal 1.5s linear infinite;
+		}
+		
+		.star-sparkle::after {
+			width: 2px;
+			height: 100%;
+			background: linear-gradient(0deg, transparent, rgba(255,255,255,0.8), transparent);
+			animation: sparkleVertical 1.5s linear infinite;
+		}
+		
+		.sparkle-1 {
+			top: 20%;
+			left: 25%;
+			animation-delay: 0.2s;
+			filter: drop-shadow(0 0 15px rgba(67, 206, 242, 0.8));
+		}
+		
+		.sparkle-2 {
+			top: 75%;
+			left: 80%;
+			animation-delay: 1.5s;
+			filter: drop-shadow(0 0 15px rgba(108, 64, 249, 0.8));
+		}
+		
+		.sparkle-3 {
+			top: 40%;
+			left: 90%;
+			animation-delay: 0.8s;
+			filter: drop-shadow(0 0 15px rgba(67, 206, 242, 0.8));
+		}
+		
+		.sparkle-4 {
+			top: 15%;
+			left: 85%;
+			animation-delay: 2.2s;
+			filter: drop-shadow(0 0 15px rgba(108, 64, 249, 0.8));
+		}
+		
+		.sparkle-5 {
+			top: 65%;
+			left: 15%;
+			animation-delay: 1s;
+			filter: drop-shadow(0 0 15px rgba(255, 184, 108, 0.8));
+			transform: scale(0.8);
+		}
+		
+		.sparkle-6 {
+			top: 30%;
+			left: 60%;
+			animation-delay: 1.8s;
+			filter: drop-shadow(0 0 15px rgba(211, 71, 214, 0.8));
+			transform: scale(1.2);
+		}
+		
+		/* Enhanced sparkle animations */
+		.star-sparkle::before {
+			width: 120%;
+			height: 2px;
+			background: linear-gradient(90deg, 
+				transparent 0%, 
+				rgba(255,255,255,0.2) 20%,
+				rgba(255,255,255,0.8) 50%, 
+				rgba(255,255,255,0.2) 80%,
+				transparent 100%);
+			animation: sparkleEnhancedH 2s ease-in-out infinite;
+		}
+		
+		.star-sparkle::after {
+			width: 2px;
+			height: 120%;
+			background: linear-gradient(0deg, 
+				transparent 0%, 
+				rgba(255,255,255,0.2) 20%,
+				rgba(255,255,255,0.8) 50%, 
+				rgba(255,255,255,0.2) 80%,
+				transparent 100%);
+			animation: sparkleEnhancedV 2s ease-in-out infinite;
+		}
+		
+		/* Diagonal sparkle lines for extra effect */
+		.star-sparkle:nth-child(even)::before {
+			transform: translate(-50%, -50%) rotate(45deg);
+		}
+		
+		.star-sparkle:nth-child(even)::after {
+			transform: translate(-50%, -50%) rotate(45deg);
+		}
+		
+		.star-sparkle:nth-child(odd)::before {
+			transform: translate(-50%, -50%) rotate(-45deg);
+		}
+		
+		.star-sparkle:nth-child(odd)::after {
+			transform: translate(-50%, -50%) rotate(-45deg);
+		}
+		
+		@keyframes sparkleEnhancedH {
+			0%, 100% { transform: translate(-50%, -50%) scaleX(0.5); opacity: 0.5; }
+			50% { transform: translate(-50%, -50%) scaleX(1.5); opacity: 1; }
+		}
+		
+		@keyframes sparkleEnhancedV {
+			0%, 100% { transform: translate(-50%, -50%) scaleY(0.5); opacity: 0.5; }
+			50% { transform: translate(-50%, -50%) scaleY(1.5); opacity: 1; }
+		}
+		
+		@keyframes sparkle {
+			0%, 100% { opacity: 0.2; transform: scale(0.7); }
+			50% { opacity: 1; transform: scale(1.2); }
+		}
+		
+		@keyframes sparkleHorizontal {
+			0%, 100% { transform: scaleX(0.5) translateX(-50%); opacity: 0; }
+			50% { transform: scaleX(1.2) translateX(0); opacity: 1; }
+		}
+		
+		@keyframes sparkleVertical {
+			0%, 100% { transform: scaleY(0.5) translateY(-50%); opacity: 0; }
+			50% { transform: scaleY(1.2) translateY(0); opacity: 1; }
+		}
+		
+		@keyframes floatStar {
+			0% { transform: translateY(0) rotate(0deg); opacity: 0.4; }
+			10% { opacity: 1; }
+			50% { transform: translateY(-100px) rotate(180deg); opacity: 0.7; }
+			90% { opacity: 0.4; }
+			100% { transform: translateY(-200px) rotate(360deg); opacity: 0; }
+		}
+				/* Enhanced 3D Message Bubbles */
+		.message-bubble {
+			position: absolute;
+			border-radius: 50%;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			z-index: 2;
+			transform-style: preserve-3d;
+			perspective: 1000px;
+			box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2),
+						0 5px 10px rgba(0, 0, 0, 0.1);
+		}
+		
+		.message-bubble::before {
+			content: '';
+			position: absolute;
+			inset: -2px;
+			border-radius: 50%;
+			background: linear-gradient(135deg, 
+				rgba(67, 206, 242, 0.8) 0%, 
+				rgba(108, 64, 249, 0.8) 50%,
+				rgba(211, 71, 214, 0.8) 100%);
+			opacity: 0.8;
+			z-index: -1;
+			filter: blur(3px);
+			animation: borderRotate 8s linear infinite;
+		}
+		
+		.message-bubble::after {
+			content: '';
+			position: absolute;
+			inset: -6px;
+			border-radius: 50%;
+			background: radial-gradient(circle at 30% 30%, 
+				rgba(255, 255, 255, 0.4) 0%, 
+				rgba(255, 255, 255, 0) 70%);
+			opacity: 0.4;
+			z-index: -2;
+			filter: blur(2px);
+		}
+		
+		.message-bubble-inner {
+			background: rgba(255, 255, 255, 0.15);
+			backdrop-filter: blur(7px);
+			-webkit-backdrop-filter: blur(7px);
+			border-radius: 50%;
+			width: 100%;
+			height: 100%;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			position: relative;
+			overflow: hidden;
+			box-shadow: inset 0 2px 5px rgba(255, 255, 255, 0.3),
+						inset 0 -2px 5px rgba(0, 0, 0, 0.2);
+		}
+		
+		.message-bubble-inner::before {
+			content: '';
+			position: absolute;
+			width: 150%;
+			height: 150%;
+			background: radial-gradient(
+				circle at 30% 30%,
+				rgba(255, 255, 255, 0.3) 0%,
+				rgba(255, 255, 255, 0.1) 30%,
+				transparent 60%
+			);
+			top: -25%;
+			left: -25%;
+			animation: bubbleShineFx 8s linear infinite;
+		}
+		
+		.message-bubble-inner::after {
+			content: '';
+			position: absolute;
+			inset: 0;
+			background: radial-gradient(
+				circle at 70% 70%,
+				rgba(67, 206, 242, 0.15) 0%,
+				rgba(108, 64, 249, 0.15) 50%,
+				transparent 70%
+			);
+			border-radius: 50%;
+			opacity: 0.5;
+			z-index: -1;
+		}
+		
+		.message-bubble i {
+			color: rgba(255, 255, 255, 0.95);
+			filter: drop-shadow(0 2px 5px rgba(0, 0, 0, 0.3));
+			animation: iconEnhancedPulse 3s ease-in-out infinite;
+			font-size: 140%;
+			transform-style: preserve-3d;
+			z-index: 1;
+		}
+		
+		/* Ripple effect for bubbles */
+		.message-bubble .ripple {
+			position: absolute;
+			inset: -8px;
+			border: 1px solid rgba(255, 255, 255, 0.3);
+			border-radius: 50%;
+			animation: rippleOut 3s ease-out infinite;
+			opacity: 0;
+		}
+		
+		.message-bubble .ripple-2 {
+			animation-delay: 1s;
+		}
+		
+		.message-bubble .ripple-3 {
+			animation-delay: 2s;
+		}
+		
+		.message-bubble-1 {
+			width: 65px;
+			height: 65px;
+			bottom: 15%;
+			left: 10%;
+			animation: floatBubble3D 18s ease-in-out infinite;
+		}
+		
+		.message-bubble-2 {
+			width: 50px;
+			height: 50px;
+			top: 25%;
+			right: 10%;
+			animation: floatBubble3D 20s ease-in-out infinite;
+			animation-delay: 2s;
+		}
+		
+		.message-bubble-3 {
+			width: 60px;
+			height: 60px;
+			bottom: 35%;
+			right: 15%;
+			animation: floatBubble3D 22s ease-in-out infinite;
+			animation-delay: 5s;
+		}
+		
+		.message-bubble-4 {
+			width: 45px;
+			height: 45px;
+			top: 65%;
+			left: 25%;
+			animation: floatBubble3D 19s ease-in-out infinite;
+			animation-delay: 3s;
+		}
+		
+		.message-bubble-5 {
+			width: 55px;
+			height: 55px;
+			bottom: 15%;
+			right: 30%;
+			animation: floatBubble3D 21s ease-in-out infinite;
+			animation-delay: 7s;
+		}
+		
+		/* Custom animations for enhanced message bubbles */
+		@keyframes borderRotate {
+			0% { transform: rotate(0deg); }
+			100% { transform: rotate(360deg); }
+		}
+		
+		@keyframes bubbleShineFx {
+			0% { transform: rotate(0deg); }
+			100% { transform: rotate(360deg); }
+		}
+		
+		@keyframes iconEnhancedPulse {
+			0%, 100% { transform: scale(0.9) translateZ(5px); filter: drop-shadow(0 2px 3px rgba(0, 0, 0, 0.2)); }
+			50% { transform: scale(1.15) translateZ(15px); filter: drop-shadow(0 5px 10px rgba(108, 64, 249, 0.4)); }
+		}
+		
+		@keyframes rippleOut {
+			0% { transform: scale(0.8); opacity: 0.8; }
+			100% { transform: scale(2); opacity: 0; }
+		}
+		
+		@keyframes floatBubble3D {
+			0% { transform: translateY(0) translateZ(0) rotateX(0deg) rotateY(0deg) scale(1); }
+			25% { transform: translateY(-50px) translateZ(20px) rotateX(15deg) rotateY(10deg) scale(1.08); }
+			50% { transform: translateY(-100px) translateZ(40px) rotateX(0deg) rotateY(20deg) scale(1.15); }
+			75% { transform: translateY(-50px) translateZ(20px) rotateX(-15deg) rotateY(-10deg) scale(1.08); }
+			100% { transform: translateY(0) translateZ(0) rotateX(0deg) rotateY(0deg) scale(1); }
+		}
+		
+		/* Add social media flying icons */		.social-fly {
+			position: absolute;
+			width: 45px;
+			height: 45px;
+			border-radius: 50%;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			opacity: 0;
+			z-index: 3;
+			box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+			overflow: hidden;
+		}
+		
+		.social-fly::before {
+			content: '';
+			position: absolute;
+			inset: 0;
+			border-radius: 50%;
+			padding: 2px;
+			background: linear-gradient(135deg, rgba(255,255,255,0.5), rgba(255,255,255,0.2));
+			-webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+			mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+			-webkit-mask-composite: xor;
+			mask-composite: exclude;
+			opacity: 0.8;
+		}
+		
+		.social-fly i {
+			color: white;
+			filter: drop-shadow(0 0 8px rgba(255,255,255,0.7));
+			font-size: 18px;
+			animation: socialIconPulse 2s ease-in-out infinite;
+			z-index: 1;
+		}
+		
+		.social-facebook {
+			background: linear-gradient(135deg, #1877F2, #00B0FF);
+			top: 10%;
+			left: -5%;
+			animation: socialFlyPath1 24s ease-in-out infinite;
+			animation-delay: 2s;
+		}
+		
+		.social-linkedin {
+			background: linear-gradient(135deg, #0077B5, #00B0FF);
+			top: 80%;
+			right: -5%;
+			animation: socialFlyPath2 28s ease-in-out infinite;
+			animation-delay: 5s;
+		}
+		
+		.social-instagram {
+			background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+			top: 50%;
+			left: -5%;
+			animation: socialFlyPath3 26s ease-in-out infinite;
+			animation-delay: 8s;
+		}
+		
+		.social-twitter {
+			background: linear-gradient(135deg, #1DA1F2, #00B0FF);
+			top: 30%;
+			right: -5%;
+			animation: socialFlyPath4 23s ease-in-out infinite;
+			animation-delay: 12s;
+		}
+		
+		.social-youtube {
+			background: linear-gradient(135deg, #FF0000, #FF5E5E);
+			top: 20%;
+			left: -8%;
+			animation: socialFlyPath5 30s ease-in-out infinite;
+			animation-delay: 15s;
+		}
+		
+		.social-whatsapp {
+			background: linear-gradient(135deg, #25D366, #128C7E);
+			top: 60%;
+			right: -8%;
+			animation: socialFlyPath6 27s ease-in-out infinite;
+			animation-delay: 18s;
+		}
+		
+		@keyframes socialIconPulse {
+			0%, 100% { transform: scale(1); }
+			50% { transform: scale(1.15); }
+		}
+		
+		/* Different flight paths for variety */
+		@keyframes socialFlyPath1 {
+			0% { opacity: 0; transform: translate(0, 0) scale(0.5) rotate(0deg); }
+			10% { opacity: 1; transform: translate(50px, 20px) scale(1) rotate(45deg); }
+			30% { transform: translate(calc(50vw - 100px), 80px) scale(1.2) rotate(90deg); }
+			60% { transform: translate(calc(80vw - 200px), 150px) scale(1.1) rotate(180deg); }
+			85% { opacity: 1; transform: translate(calc(100vw - 100px), calc(100% - 150px)) scale(0.9) rotate(270deg); }
+			100% { opacity: 0; transform: translate(calc(100vw + 50px), calc(100% - 100px)) scale(0.5) rotate(360deg); }
+		}
+		
+		@keyframes socialFlyPath2 {
+			0% { opacity: 0; transform: translate(0, 0) scale(0.5) rotate(0deg); }
+			10% { opacity: 1; transform: translate(-50px, 40px) scale(0.8) rotate(-30deg); }
+			35% { transform: translate(calc(30vw - 100px), 120px) scale(1.1) rotate(-90deg); }
+			65% { transform: translate(calc(60vw - 200px), 200px) scale(1.2) rotate(-180deg); }
+			85% { opacity: 1; transform: translate(calc(100vw - 150px), calc(80% - 100px)) scale(1) rotate(-270deg); }
+			100% { opacity: 0; transform: translate(calc(100vw + 80px), calc(60% - 50px)) scale(0.5) rotate(-360deg); }
+		}
+		
+		@keyframes socialFlyPath3 {
+			0% { opacity: 0; transform: translate(0, 0) scale(0.5) rotate(0deg); }
+			15% { opacity: 1; transform: translate(100px, -20px) scale(0.9) rotate(20deg); }
+			40% { transform: translate(calc(40vw), 50px) scale(1.15) rotate(-40deg); }
+			70% { transform: translate(calc(70vw), 150px) scale(1.05) rotate(60deg); }
+			90% { opacity: 1; transform: translate(calc(90vw), calc(70% - 50px)) scale(0.85) rotate(-20deg); }
+			100% { opacity: 0; transform: translate(calc(100vw + 30px), calc(80%)) scale(0.5) rotate(0deg); }
+		}
+		
+		@keyframes socialFlyPath4 {
+			0% { opacity: 0; transform: translate(0, 0) scale(0.5) rotate(0deg); }
+			10% { opacity: 1; transform: translate(-80px, 60px) scale(0.95) rotate(-15deg); }
+			30% { transform: translate(calc(-20vw), 100px) scale(1.1) rotate(30deg); }
+			60% { transform: translate(calc(-50vw), 40px) scale(1) rotate(-45deg); }
+			85% { opacity: 1; transform: translate(calc(-80vw), calc(30%)) scale(1.05) rotate(15deg); }
+			100% { opacity: 0; transform: translate(calc(-100vw - 50px), calc(50%)) scale(0.5) rotate(0deg); }
+		}
+		
+		@keyframes socialFlyPath5 {
+			0% { opacity: 0; transform: translate(0, 0) scale(0.5) translateZ(0) rotate(0deg); }
+			10% { opacity: 1; transform: translate(50px, 100px) scale(0.9) translateZ(20px) rotate(30deg); }
+			40% { transform: translate(calc(30vw), 50px) scale(1.2) translateZ(40px) rotate(120deg); }
+			70% { transform: translate(calc(60vw), 180px) scale(1.1) translateZ(30px) rotate(210deg); }
+			90% { opacity: 1; transform: translate(calc(80vw), calc(80%)) scale(0.8) translateZ(10px) rotate(300deg); }
+			100% { opacity: 0; transform: translate(calc(100vw + 80px), calc(90%)) scale(0.5) translateZ(0) rotate(360deg); }
+		}
+		
+		@keyframes socialFlyPath6 {
+			0% { opacity: 0; transform: translate(0, 0) scale(0.5) rotate(0deg); }
+			15% { opacity: 1; transform: translate(-40px, -30px) scale(1) rotate(-40deg); }
+			45% { transform: translate(calc(-30vw), -80px) scale(1.15) rotate(-100deg); }
+			75% { transform: translate(calc(-60vw), 20px) scale(0.9) rotate(-200deg); }
+			90% { opacity: 1; transform: translate(calc(-90vw), calc(60%)) scale(1.05) rotate(-300deg); }
+			100% { opacity: 0; transform: translate(calc(-100vw - 40px), calc(70%)) scale(0.5) rotate(-360deg); }
+		}
+				@keyframes iconPulse {
+			0% { transform: scale(0.9); filter: drop-shadow(0 0 5px rgba(255,255,255,0.5)); }
+			100% { transform: scale(1.1); filter: drop-shadow(0 0 10px rgba(255,255,255,0.9)); }
+		}
+		
+		/* Enhanced Submit Button Styles */
+		.modern-submit-btn {
+			overflow: hidden;
+			position: relative;
+		}
+		
+		.btn-glow {
+			position: absolute;
+			inset: -5px;
+			background: linear-gradient(135deg, 
+				rgba(67, 206, 242, 0.7) 0%, 
+				rgba(108, 64, 249, 0.7) 50%,
+				rgba(211, 71, 214, 0.7) 100%);
+			border-radius: 30px;
+			filter: blur(15px);
+			opacity: 0;
+			z-index: -1;
+			transition: opacity 0.3s ease;
+		}
+		
+		.modern-submit-btn:hover .btn-glow {
+			opacity: 0.8;
+			animation: btnGlowEffect 3s infinite;
+		}
+		
+		.btn-particles {
+			position: absolute;
+			inset: 0;
+			pointer-events: none;
+		}
+		
+		.btn-particle {
+			position: absolute;
+			width: 6px;
+			height: 6px;
+			background: white;
+			border-radius: 50%;
+			filter: blur(1px);
+			opacity: 0;
+		}
+		
+		.modern-submit-btn:hover .btn-particle:nth-child(1) {
+			top: 20%;
+			left: 10%;
+			animation: btnParticle 3s ease-out infinite;
+			animation-delay: 0.1s;
+		}
+		
+		.modern-submit-btn:hover .btn-particle:nth-child(2) {
+			top: 60%;
+			left: 80%;
+			animation: btnParticle 2.5s ease-out infinite;
+			animation-delay: 0.3s;
+		}
+		
+		.modern-submit-btn:hover .btn-particle:nth-child(3) {
+			top: 70%;
+			left: 20%;
+			animation: btnParticle 3.2s ease-out infinite;
+			animation-delay: 0.5s;
+		}
+		
+		.modern-submit-btn:hover .btn-particle:nth-child(4) {
+			top: 40%;
+			left: 90%;
+			animation: btnParticle 2.8s ease-out infinite;
+			animation-delay: 0.2s;
+		}
+		
+		.modern-submit-btn:hover .btn-particle:nth-child(5) {
+			top: 30%;
+			left: 40%;
+			animation: btnParticle 3.5s ease-out infinite;
+			animation-delay: 0.4s;
+		}
+		
+		@keyframes btnParticle {
+			0% { transform: translate(0, 0) scale(0.5); opacity: 0; }
+			10% { transform: translate(-5px, -10px) scale(1); opacity: 0.8; }
+			60% { transform: translate(-15px, -30px) scale(0.5); opacity: 0.6; }
+			100% { transform: translate(-20px, -70px) scale(0.3); opacity: 0; }
+		}
+		
+		@keyframes btnGlowEffect {
+			0%, 100% { filter: blur(15px) hue-rotate(0deg); opacity: 0.6; }
+			50% { filter: blur(20px) hue-rotate(20deg); opacity: 0.8; }
+		}
+		
+		@keyframes floatBubble {
+			0% { transform: translateY(0) scale(1) rotate(0deg); opacity: 0.7; }
+			25% { transform: translateY(-50px) scale(1.08) rotate(5deg); opacity: 0.9; }
+			50% { transform: translateY(-100px) scale(1.15) rotate(0deg); opacity: 1; }
+			75% { transform: translateY(-50px) scale(1.08) rotate(-5deg); opacity: 0.9; }
+			100% { transform: translateY(0) scale(1) rotate(0deg); opacity: 0.7; }
+		}.contact-form-header {
+			background: linear-gradient(135deg, rgba(67, 206, 242, 0.9), rgba(108, 64, 249, 0.9));
+			padding: 35px;
+			color: #fff;
+			position: relative;
+			overflow: hidden;
+			border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+			border-top-left-radius: 20px;
+			border-top-right-radius: 20px;
+			box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+		}
+		.contact-form-header::after {
+			content: '';
+			position: absolute;
+			top: 0;
+			left: 0;
+			right: 0;
+			bottom: 0;
+			background: rgba(13, 17, 28, 0.1);
+			backdrop-filter: blur(3px);
+			-webkit-backdrop-filter: blur(3px);
+			background-image: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11 18c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm48 25c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm-43-7c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm63 31c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM34 90c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm56-76c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM12 86c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm28-65c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm23-11c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-6 60c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm29 22c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zM32 63c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm57-13c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-9-21c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM60 91c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM35 41c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM12 60c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2z' fill='rgba(255,255,255,.075)' fill-opacity='0.1' fill-rule='evenodd'/%3E%3C/svg%3E");
+		}
+		.contact-form-header h3 {
+			position: relative;
+			z-index: 2;
+			margin-bottom: 10px;
+			font-weight: 600;
+			text-shadow: 0 2px 4px rgba(0,0,0,0.2);
+		}
+		.contact-form-header p {
+			position: relative;
+			z-index: 2;
+			opacity: 0.9;
+			font-size: 16px;
+			text-shadow: 0 1px 2px rgba(0,0,0,0.1);
+		}
+		.contact-form {
+			padding: 45px;
+			position: relative;
+			background-image: 
+				radial-gradient(circle at 10% 20%, rgba(67, 206, 242, 0.03) 0%, transparent 20%), 
+				radial-gradient(circle at 90% 80%, rgba(108, 64, 249, 0.03) 0%, transparent 20%);
+			color: rgba(255, 255, 255, 0.9);
+		}		.form-control {
+			height: 55px;
+			background: rgba(24, 28, 47, 0.4);
+			border-radius: 14px;
+			margin-bottom: 25px;
+			border: 1px solid rgba(255, 255, 255, 0.1);
+			backdrop-filter: blur(10px);
+			-webkit-backdrop-filter: blur(10px);
+			padding: 10px 20px 10px 50px;
+			font-size: 16px;
+			color: rgba(255, 255, 255, 0.95);
+			transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+			box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+			position: relative;
+			z-index: 1;
+		}
+		
+		.form-control-modern {
+			background: rgba(13, 17, 28, 0.4);
+			border: 1px solid rgba(255, 255, 255, 0.1);
+			position: relative;
+			overflow: hidden;
+			box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2),
+						inset 0 1px 0 rgba(255, 255, 255, 0.1),
+						inset 0 -1px 0 rgba(0, 0, 0, 0.2);
+			transition: all 0.4s cubic-bezier(0.23, 1, 0.32, 1);
+		}
+		
+		.form-control-modern::before {
+			content: '';
+			position: absolute;
+			top: -1px;
+			left: -1px;
+			right: -1px;
+			height: 1px;
+			background: linear-gradient(90deg, 
+				transparent 0%, 
+				rgba(67, 206, 242, 0.2) 25%, 
+				rgba(255, 255, 255, 0.3) 50%,
+				rgba(108, 64, 249, 0.2) 75%, 
+				transparent 100%);
+			opacity: 0;
+			transform: translateX(-100%);
+			transition: transform 0.5s ease, opacity 0.5s ease;
+		}
+		
+		.form-group-modern:hover .form-control-modern::before,
+		.form-control-modern:focus::before {
+			opacity: 1;
+			transform: translateX(0);
+			animation: gradientFlow 2s linear infinite;
+		}
+		
+		.form-control-modern::after {
+			content: '';
+			position: absolute;
+			inset: 0;
+			background: radial-gradient(
+				ellipse at 50% 0%, 
+				rgba(255, 255, 255, 0.07) 0%,
+				transparent 70%
+			);
+			opacity: 0;
+			transition: opacity 0.5s ease;
+		}
+		
+		.form-control-modern:focus::after,
+		.form-group-modern:hover .form-control-modern::after {
+			opacity: 1;
+		}
+		
+		@keyframes gradientFlow {
+			0% { background-position: 0% 50%; }
+			50% { background-position: 100% 50%; }
+			100% { background-position: 0% 50%; }
+		}
+		
+		.form-group-modern {
+			position: relative;
+			margin-bottom: 30px;
+		}
+		
+		.form-group-modern label {
+			position: absolute;
+			left: 50px;
+			top: 17px;
+			color: rgba(255, 255, 255, 0.7);
+			font-size: 16px;
+			font-weight: 400;
+			pointer-events: none;
+			transition: 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55) all;
+			opacity: 0.8;
+			letter-spacing: 0.02em;
+		}
+		
+		.form-group-modern input:focus ~ label, 
+		.form-group-modern input:not(:placeholder-shown) ~ label,
+		.form-group-modern select:focus ~ label,
+		.form-group-modern textarea:focus ~ label {
+			top: -14px;
+			left: 20px;
+			font-size: 12px;
+			background: linear-gradient(135deg, #43CEF2, #6C40F9);
+			color: white;
+			padding: 3px 10px;
+			border-radius: 20px;
+			opacity: 1;
+			z-index: 2;
+			box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3), 
+						0 0 0 1px rgba(255, 255, 255, 0.1);
+			animation: labelPop 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55) forwards;
+			letter-spacing: 0.05em;
+			text-transform: uppercase;
+			font-weight: 500;
+			font-size: 11px;
+		}
+		
+		@keyframes labelPop {
+			0% { transform: scale(0.8) translateY(0); }
+			50% { transform: scale(1.1) translateY(-2px); }
+			100% { transform: scale(1) translateY(0); }
+		}
+		
+		.input-icon {
+			position: absolute;
+			left: 20px;
+			top: 50%;
+			transform: translateY(-50%);
+			color: rgba(67, 206, 242, 0.8);
+			opacity: 0.7;
+			transition: all 0.4s ease;
+			font-size: 18px;
+		}
+		
+		.form-group-modern:hover .input-icon,
+		.form-group-modern input:focus ~ .input-icon,
+		.form-group-modern textarea:focus ~ .input-icon {
+			opacity: 1;
+			transform: translateY(-50%) scale(1.2);
+			color: #43CEF2;
+			filter: drop-shadow(0 0 8px rgba(67, 206, 242, 0.8));
+			animation: iconFloat 3s ease infinite alternate;
+		}
+		
+		@keyframes iconFloat {
+			0% { transform: translateY(-50%) scale(1); }
+			50% { transform: translateY(-50%) scale(1.15); }
+			100% { transform: translateY(-50%) scale(1); }
+		}
+		
+		.focus-border {
+			position: absolute;
+			bottom: 0;
+			left: 5%;
+			right: 5%;
+			height: 2px;
+			background: linear-gradient(90deg, rgba(67, 206, 242, 0.5), rgba(108, 64, 249, 0.8), rgba(67, 206, 242, 0.5));
+			transform: scaleX(0);
+			transition: transform 0.4s ease;
+			border-radius: 2px;
+			filter: blur(1px);
+		}
+		
+		.form-control:focus ~ .focus-border {
+			transform: scaleX(1);
+			animation: borderPulse 2s ease-in-out infinite;
+		}
+		
+		@keyframes borderPulse {
+			0%, 100% { opacity: 0.5; filter: blur(1px); }
+			50% { opacity: 1; filter: blur(0px); }
+		}
+				.form-control:focus {
+			background: rgba(13, 17, 28, 0.6);
+			box-shadow: 0 10px 25px rgba(0,0,0,0.25), 
+						inset 0 0 0 1px rgba(67, 206, 242, 0.3), 
+						inset 0 0 15px rgba(67, 206, 242, 0.1),
+						0 0 15px rgba(67, 206, 242, 0.2);
+			border: 1px solid rgba(67, 206, 242, 0.5);
+			transform: translateY(-3px) scale(1.01);
+			outline: none;
+			animation: inputGlowMatte 3s ease-in-out infinite alternate;
+			color: white;
+		}
+		
+		/* Enhanced form focus state with particles */
+		.form-group-modern {
+			position: relative;
+		}
+		
+		.form-group-modern::after {
+			content: '';
+			position: absolute;
+			width: 100%;
+			height: 100%;
+			top: 0;
+			left: 0;
+			pointer-events: none;
+			opacity: 0;
+			z-index: 0;
+			transition: opacity 0.4s ease;
+		}
+		
+		.form-group-modern:focus-within::after {
+			opacity: 1;
+		}
+		
+		/* Animated background for focused inputs */
+		.form-control-modern:focus {
+			border-color: transparent;
+			box-shadow: 0 15px 30px rgba(0,0,0,0.3), 
+						0 0 20px rgba(67, 206, 242, 0.3),
+						inset 0 0 0 1px rgba(108, 64, 249, 0.3), 
+						inset 0 0 25px rgba(108, 64, 249, 0.15);
+			background: linear-gradient(
+				135deg,
+				rgba(13, 17, 28, 0.8) 0%,
+				rgba(24, 28, 47, 0.6) 100%
+			);
+		}
+		
+		/* Floating particles on input focus */
+		.form-particles {
+			position: absolute;
+			width: 100%;
+			height: 100%;
+			top: 0;
+			left: 0;
+			pointer-events: none;
+			z-index: 0;
+			overflow: hidden;
+			opacity: 0;
+			transition: opacity 0.3s ease;
+		}
+		
+		.form-group-modern:focus-within .form-particles {
+			opacity: 1;
+		}
+		
+		.form-particle {
+			position: absolute;
+			width: 4px;
+			height: 4px;
+			border-radius: 50%;
+			background: rgba(67, 206, 242, 0.6);
+			pointer-events: none;
+			opacity: 0;
+		}
+		
+		.form-group-modern:focus-within .form-particle:nth-child(1) {
+			top: 20%;
+			left: 10%;
+			animation: floatParticle 4s ease-in-out infinite;
+			animation-delay: 0.2s;
+		}
+		
+		.form-group-modern:focus-within .form-particle:nth-child(2) {
+			top: 70%;
+			left: 80%;
+			animation: floatParticle 3.5s ease-in-out infinite;
+			animation-delay: 0.5s;
+		}
+		
+		.form-group-modern:focus-within .form-particle:nth-child(3) {
+			top: 80%;
+			left: 15%;
+			animation: floatParticle 4.5s ease-in-out infinite;
+			animation-delay: 0.8s;
+		}
+		
+		.form-group-modern:focus-within .form-particle:nth-child(4) {
+			top: 30%;
+			left: 90%;
+			animation: floatParticle 3s ease-in-out infinite;
+			animation-delay: 1.2s;
+		}
+		
+		@keyframes floatParticle {
+			0% { transform: translate(0, 0) scale(0); opacity: 0; }
+			25% { transform: translate(-10px, -15px) scale(1); opacity: 0.8; }
+			50% { transform: translate(-20px, -30px) scale(1.5); opacity: 0.4; }
+			75% { transform: translate(-30px, -45px) scale(1); opacity: 0.2; }
+			100% { transform: translate(-40px, -60px) scale(0); opacity: 0; }
+		}
+		
+		@keyframes inputGlowMatte {
+			0% { 
+				box-shadow: 0 10px 25px rgba(0,0,0,0.25), 
+							inset 0 0 0 1px rgba(67, 206, 242, 0.3), 
+							inset 0 0 15px rgba(67, 206, 242, 0.1),
+							0 0 15px rgba(67, 206, 242, 0.1); 
+			}
+			50% { 
+				box-shadow: 0 15px 30px rgba(0,0,0,0.3), 
+							inset 0 0 0 1px rgba(108, 64, 249, 0.5), 
+							inset 0 0 20px rgba(108, 64, 249, 0.2),
+							0 0 20px rgba(108, 64, 249, 0.2); 
+			}
+			100% { 
+				box-shadow: 0 10px 25px rgba(0,0,0,0.25), 
+							inset 0 0 0 1px rgba(67, 206, 242, 0.3), 
+							inset 0 0 15px rgba(67, 206, 242, 0.1),
+							0 0 15px rgba(67, 206, 242, 0.1); 
+			}
+		}
+		
+		/* Modern Input Group for Phone */
+		.modern-input-group {
+			display: flex;
+			position: relative;
+		}
+		
+		.input-group-prepend {
+			position: relative;
+		}
+		
+		.country-select {
+			width: auto;
+			border-radius: 12px 0 0 12px;
+			border-right: none;
+			padding-right: 10px;
+			background-position: 85% center;
+			padding-left: 45px;
+		}
+		
+		.modern-input-group .form-control {
+			border-radius: 0 12px 12px 0;
+		}
+		
+		.modern-input-group .input-icon {
+			left: 15px;
+		}
+		
+		.form-control::placeholder {
+			color: rgba(255,255,255,0.4);
+			font-weight: 300;
+		}
+		
+		/* Enhanced Textarea Styling */
+		textarea.form-control-modern {
+			padding-top: 20px;
+			min-height: 120px;
+			resize: vertical;
+		}
+		
+		/* Modern Checkbox Style */
+		.modern-checkbox {
+			position: relative;
+			padding-left: 30px;
+			cursor: pointer;
+			user-select: none;
+		}
+		
+		.modern-checkbox input {
+			position: absolute;
+			opacity: 0;
+			cursor: pointer;
+			height: 0;
+			width: 0;
+		}
+		
+		.modern-checkbox .form-check-label::before {
+			content: "";
+			position: absolute;
+			left: 0;
+			top: 2px;
+			width: 20px;
+			height: 20px;
+			background: rgba(24, 28, 47, 0.7);
+			backdrop-filter: blur(5px);
+			-webkit-backdrop-filter: blur(5px);
+			border: 1px solid rgba(67, 206, 242, 0.4);
+			border-radius: 5px;
+			transition: all 0.3s ease;
+		}
+		
+		.modern-checkbox .form-check-label::after {
+			content: "";
+			position: absolute;
+			left: 7px;
+			top: 3px;
+			width: 6px;
+			height: 12px;
+			border: solid #43CEF2;
+			border-width: 0 2px 2px 0;
+			transform: rotate(45deg) scale(0);
+			opacity: 0;
+			transition: all 0.2s ease;
+		}
+		
+		.modern-checkbox input:checked ~ .form-check-label::before {
+			background: rgba(24, 28, 47, 0.9);
+			border-color: #43CEF2;
+			box-shadow: 0 0 8px rgba(67, 206, 242, 0.5);
+		}
+		
+		.modern-checkbox input:checked ~ .form-check-label::after {
+			opacity: 1;
+			transform: rotate(45deg) scale(1);
+		}
+		textarea.form-control {
+			height: 150px;
+			resize: none;
+			line-height: 1.6;
+		}
+		label {
+			display: block;
+			margin-bottom: 8px;
+			font-weight: 500;
+			color: rgba(255, 255, 255, 0.9);
+		}
+		.form-check {
+			padding-left: 1.8rem;
+		}
+		.form-check-input {
+			margin-top: 0.3rem;
+			margin-left: -1.8rem;
+			width: 18px;
+			height: 18px;
+			cursor: pointer;
+		}
+		.form-check-label {
+			font-size: 14px;
+			color: rgba(255, 255, 255, 0.7);
+			cursor: pointer;
+		}
+		.terms-link {
+			color: var(--base-color);
+			text-decoration: none;
+			position: relative;
+			transition: all 0.3s ease;
+		}
+		
+		.terms-link:after {
+			content: '';
+			position: absolute;
+			width: 100%;
+			height: 1px;
+			bottom: 0;
+			left: 0;
+			background-color: var(--base-color);
+			transform: scaleX(0);
+			transform-origin: bottom right;
+			transition: transform 0.3s ease;
+		}
+		
+		.terms-link:hover:after {
+			transform: scaleX(1);
+			transform-origin: bottom left;
+		}
+		
+		.terms-link:hover {
+			text-decoration: none;
+		}
+		.country-select {
+			background: rgba(255, 255, 255, 0.5);
+			border-right: none;
+		}
+		.input-group .form-control {
+			margin-bottom: 0;
+		}.map-wrapper {
+			height: 400px;
+			border-radius: 16px;
+			overflow: hidden;
+			margin-top: 50px;
+			box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+			border: 1px solid rgba(255, 255, 255, 0.3);
+			position: relative;
+			z-index: 1;
+			transition: transform 0.3s ease, box-shadow 0.3s ease;
+		}
+		.map-wrapper:hover {
+			transform: translateY(-5px);
+			box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+		}
+		.map-wrapper::before {
+			content: '';
+			position: absolute;
+			inset: 0;
+			z-index: 2;
+			pointer-events: none;
+			background: linear-gradient(135deg, 
+				rgba(255,255,255,0.1) 0%, 
+				rgba(255,255,255,0) 100%);
+		}
+		.map-wrapper iframe {
+			width: 100%;
+			height: 100%;
+			border: none;
+		}
+		
+		/* FAQ Section Styling */
+		.accordion-item {
+			border-radius: 16px;
+			overflow: hidden;
+			border: 1px solid rgba(255, 255, 255, 0.18);
+			background: rgba(255, 255, 255, 0.05);
+			backdrop-filter: blur(12px);
+			-webkit-backdrop-filter: blur(12px);
+			margin-bottom: 16px;
+			box-shadow: 0 8px 32px rgba(31, 38, 135, 0.1);
+			transition: transform 0.3s ease, box-shadow 0.3s ease;
+		}
+		.accordion-item:hover {
+			transform: translateY(-3px);
+			box-shadow: 0 12px 32px rgba(31, 38, 135, 0.15);
+		}
+		.accordion-button {
+			padding: 20px 25px;
+			font-weight: 600;
+			font-size: 18px;
+			background: rgba(255, 255, 255, 0.05);
+			color: #fff;
+			position: relative;
+			z-index: 1;
+			transition: all 0.3s ease;
+		}
+		.accordion-button::after {
+			background-size: 18px;
+			background-color: rgba(255, 255, 255, 0.2);
+			border-radius: 50%;
+			width: 30px;
+			height: 30px;
+			background-position: center;
+			transition: all 0.3s ease;
+		}		.accordion-button:not(.collapsed) {
+			background: rgba(0, 0, 0, 0.3);
+			color: #fff;
+			box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+		}
+		.accordion-button:not(.collapsed)::after {
+			background-color: rgba(0, 0, 0, 0.4);
+		}
+		.accordion-body {
+			padding: 25px;
+			background: rgba(255, 255, 255, 0.08);
+			color: rgba(255, 255, 255, 0.9);
+			font-size: 16px;
+			line-height: 1.8;
+			border-top: 1px solid rgba(255, 255, 255, 0.08);
+		}		/* Enhanced styles for the form submission button */
+		.bi-btn-main.bi-btn-hover {
+			position: relative;
+			overflow: hidden;
+			transition: all 0.4s ease;
+			background: var(--base-color);
+			border-radius: 30px;
+			padding: 12px 35px;
+			box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3), 
+						0 0 0 5px rgba(0, 0, 0, 0.1), 
+						inset 0 1px 0 rgba(255,255,255,0.3);
+		}
+		
+		.bi-btn-main.bi-btn-hover:hover {
+			transform: translateY(-3px);
+			box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4), 
+						0 0 0 7px rgba(0, 0, 0, 0.15), 
+						inset 0 1px 0 rgba(255,255,255,0.3);
+		}
+		
+		.bi-btn-main.bi-btn-hover:after {
+			content: '';
+			position: absolute;
+			top: -50%;
+			right: -50%;
+			bottom: -50%;
+			left: -50%;
+			background: linear-gradient(to bottom, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0));
+			transform: rotateZ(60deg) translate(-5em, 7.5em);
+			animation: shine 2s infinite;
+			pointer-events: none;
+		}
+		
+		.bi-btn-main.bi-btn-hover:before {
+			content: '';
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			background: linear-gradient(135deg, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0) 50%);
+			border-radius: 30px;
+		}
+				/* Modern Submit Button */
+		.modern-submit-btn {
+			position: relative;
+			overflow: hidden;
+			padding: 15px 35px;
+			border-radius: 50px;
+			background: linear-gradient(135deg, #43CEF2, #6C40F9);
+			color: #fff;
+			font-weight: 600;
+			letter-spacing: 1px;
+			border: none;
+			cursor: pointer;
+			transition: all 0.4s ease;
+			box-shadow: 0 10px 20px rgba(0,0,0,0.2), 0 0 0 1px rgba(255,255,255,0.1);
+			z-index: 1;
+			text-transform: uppercase;
+		}
+		
+		.btn-icon {
+			margin-right: 8px;
+			transition: transform 0.3s ease;
+		}
+		
+		.modern-submit-btn:hover .btn-icon {
+			transform: translateX(-3px);
+		}
+		
+		.btn-shine {
+			position: absolute;
+			top: -50%;
+			left: -50%;
+			width: 200%;
+			height: 200%;
+			background: linear-gradient(to right, rgba(255,255,255,0) 0%, rgba(255,255,255,0.3) 50%, rgba(255,255,255,0) 100%);
+			transform: rotate(30deg);
+			transition: all 0.5s ease;
+			opacity: 0.3;
+		}
+		
+		.modern-submit-btn:hover .btn-shine {
+			left: 100%;
+			transition: all 0.5s ease;
+		}
+		
+		.btn-hover-effect {
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			background: radial-gradient(circle, transparent 1%, rgba(0,0,0,0.1) 1%) center/15000%;
+			opacity: 0;
+			z-index: -1;
+			transition: all 0.5s ease;
+		}
+		
+		.modern-submit-btn:active .btn-hover-effect {
+			background-size: 100%;
+			opacity: 1;
+			transition: all 0s;
+		}
+		
+		.modern-submit-btn:hover {
+			transform: translateY(-3px);
+			box-shadow: 0 15px 25px rgba(0,0,0,0.25);
+		}
+		
+		@keyframes shine {
+			0% {
+				transform: rotateZ(60deg) translate(-5em, 7.5em);
+				opacity: 0;
+			}
+			10% {
+				opacity: 0.9;
+			}
+			100% {
+				transform: rotateZ(60deg) translate(5em, -7.5em);
+				opacity: 0;
+			}
+		}
+	</style>
+</head>
+<body class="home-2">
+	<div id="preloader"></div>
+	<div class="up">
+		<a href="#" class="scrollup text-center"><i class="fas fa-chevron-up"></i></a>
+	</div>
+	<div class="cursor"></div>
+
+<!-- Start of header section
+	============================================= -->
+	<header id="bi-header" class="bi-header-section header-style-two">
+		<div class="bi-header-content">
+			<div class="bi-header-logo-main-menu d-flex align-items-center justify-content-between">
+				<div class="brand-logo">
+					<a href="#"><img src="../assets/img/logo/logo2.png" alt=""></a>
+				</div>
+				<div class="bi-header-main-navigation">
+					<nav class="main-navigation clearfix ul-li" id="navbar-example3">						<ul id="main-nav" class="nav navbar-nav clearfix">
+							<li class="nav-item"><a class="nav-link" href="aboutus.html">Home</a></li>				
+							<li class="nav-item"><a class="nav-link" href="aboutus.html#bi-about-2">About Us</a></li>		
+							<li class="nav-item"><a class="nav-link" href="aboutus.html#bi-biskiran-services">Services</a></li>		
+							<li class="nav-item"><a class="nav-link" href="aboutus.html#bi-portfolio-2">Portfolio</a></li>				
+							<li class="nav-item"><a class="nav-link" href="aboutus.html#bi-testimonial-2">Testimonials</a></li>		
+							<li class="nav-item"><a class="nav-link active" href="#">Contact</a></li>		
+						</ul>
+					</nav>
+				</div>
+				<div class="bi-header-cta-btn-grp d-flex align-items-center">
+					<div class="bi-header-search">
+						<button class="search-btn"><i class="far fa-search"></i></button>
+					</div>
+					<div class="cta-btn-info d-flex align-items-center">
+						<div class="inner-icon d-flex justify-content-center align-items-center">
+							<i class="fas fa-phone"></i>
+						</div>
+						<div class="inner-text">
+							<span>Give us a call</span>
+							<a href="tel:+9779765728369">+977 9765728369</a>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="mobile_menu position-relative">
+				<div class="mobile_menu_button open_mobile_menu">
+					<i class="fal fa-bars"></i>
+				</div>
+				<div class="mobile_menu_wrap">
+					<div class="mobile_menu_overlay open_mobile_menu"></div>
+					<div class="mobile_menu_content">
+						<div class="mobile_menu_close open_mobile_menu">
+							<i class="fal fa-times"></i>
+						</div>
+						<div class="m-brand-logo">
+							<a href="#"><img src="../assets/img/logo/logo2.png" alt=""></a>
+						</div>
+						<div class="mobile-search-bar position-relative">
+							<form action="#">
+								<input type="text" name="search" placeholder="Keywords">
+								<button><i class="fal fa-search"></i></button>
+							</form>
+						</div>
+						<nav class="mobile-main-navigation  clearfix ul-li">							<ul id="m-main-nav" class="nav navbar-nav clearfix">
+								<li class="nav-item"><a class="nav-link" href="aboutus.html">Home</a></li>				
+								<li class="nav-item"><a class="nav-link" href="aboutus.html#bi-about-2">About Us</a></li>		
+								<li class="nav-item"><a class="nav-link" href="aboutus.html#bi-biskiran-services">Services</a></li>		
+								<li class="nav-item"><a class="nav-link" href="aboutus.html#bi-portfolio-2">Portfolio</a></li>				
+								<li class="nav-item"><a class="nav-link" href="aboutus.html#bi-testimonial-2">Testimonials</a></li>		
+								<li class="nav-item"><a class="nav-link active" href="#">Contact</a></li>			
+							</ul>
+						</nav>
+						<div class="bi-mobile-header-social text-center">
+							<a href="https://www.instagram.com/biskirantechnologies/"> <i class="fab fa-instagram"></i></a>
+							<a href="https://www.linkedin.com/company/biskirantechnologies"> <i class="fab fa-linkedin-in"></i></a>
+							<a href="https://www.facebook.com/biskirantechnologies"> <i class="fab fa-facebook"></i></a>
+							<a href="#"> <i class="fab fa-youtube"></i></a>
+						</div>
+					</div>
+				</div>
+				<!-- /Mobile-Menu -->
+			</div>
+		</div>
+	</header>
+	<!-- search filed -->
+	<div class="search-body">
+		<div class="search-form">
+			<form action="#" class="search-form-area">
+				<input class="search-input" type="search" placeholder="Search Here">
+				<button type="submit" class="search-btn1">
+					<i class="fas fa-search"></i>
+				</button>	
+			</form>
+			<div class="outer-close text-center search-btn">
+				<i class="far fa-times"></i>
+			</div>
+		</div>
+	</div>
+<!-- End of header section
+	============================================= -->
+
+<!-- Start of Banner section
+	============================================= -->
+	<section id="bi-banner" class="bi-banner-section" data-background="../assets/img/slider/banner_2.png">
+		<div class="bi-banner-content position-relative">
+			<span class="bi-banner-img position-absolute scene banner_img_1  wow zoomIn" data-wow-delay="0ms" data-wow-duration="2000ms"><img class="layer" data-depth="0.9" src="../assets/img/slider/bn1.png" alt=""></span>
+			<span class="bi-banner-img position-absolute scene banner_img_2  wow zoomIn" data-wow-delay="200ms" data-wow-duration="2000ms"><img class="layer" data-depth="-0.9" src="../assets/img/slider/bn2.png" alt=""></span>
+			<span class="bi-banner-img position-absolute scene banner_img_3  wow zoomIn" data-wow-delay="300ms" data-wow-duration="2000ms"><img class="layer" data-depth="-0.9" src="../assets/img/slider/bn3.png" alt=""></span>
+			<span class="bi-banner-img position-absolute scene banner_img_4  wow zoomIn" data-wow-delay="100ms" data-wow-duration="2000ms"><img class="layer" data-depth="0.9" src="../assets/img/slider/bn4.png" alt=""></span>
+			<span class="bi-banner-img position-absolute scene banner_img_5  wow zoomIn" data-wow-delay="800ms" data-wow-duration="2000ms"><img class="layer" data-depth="-0.9" src="../assets/img/slider/bn5.png" alt=""></span>
+			<div class="bi-banner-text headline text-center pera-content">
+				<div class="banner-subtitle text-uppercase wow fadeInUp" data-wow-delay="0ms" data-wow-duration="1000ms">
+					BisKIRAN TECHNOLOGIES
+				</div>
+				<h1 class="headline-title">GET IN TO TOUCH</h1>
+				<div class="bins-text">
+					<p>We'd love to hear from you. Let us know how we can help with your next project.</p>
+				</div>
+				<div class="bi-btn-2  bi-btn-area text-uppercase wow fadeInUp" data-wow-delay="400ms" data-wow-duration="1500ms">
+					<a class="bi-btn-main  bi-btn-hover bi-btn-item" href="#contact-form-section">  <span></span> Contact Now</a>
+				</div>
+			</div>
+		</div>
+	</section>
+<!-- End of Banner section
+	============================================= -->
+
+<!-- Start of Contact Info section
+	============================================= -->
+    <span class="bi-side-shape shape_1 position-absolute"><img src="../assets/img/bg/shape_7.png" alt=""></span>
+	<section id="bi-contact-info" class="bi-about-section-2 position-relative">
+		<span class="bi-side-shape shape_1 position-absolute"><img src="../assets/img/bg/shape_2.png" alt=""></span>
+		<div class="container">
+			<div class="bi-section-title-2 text-center headline pera-content">
+				<div class="bi-subtitle text-uppercase wow fadeInRight" data-wow-delay="200ms" data-wow-duration="1000ms">
+					Contact Information
+				</div>
+				<h2 class="tx-split-text split-in-right">Let's Start a
+					<span>Conversation</span>
+				</h2>
+				<div class="bins-text">
+					<p>Whether you're launching a startup or digitally transforming an enterprise, we are your innovation partner from concept to scale.</p>
+				</div>
+			</div>
+			
+			<div class="row mt-5">
+				<div class="col-lg-4 mb-4 wow fadeInUp" data-wow-delay="300ms" data-wow-duration="1500ms">
+					<div class="contact-info-box text-center">
+						<div class="contact-info-icon mx-auto">
+							<i class="fas fa-map-marker-alt"></i>
+						</div>
+						<h4 class="mb-3">Our Locations</h4>
+						<p>Nepal & Australia</p>
+						<p class="mb-0">Global Operations</p>
+					</div>
+				</div>
+				
+				<div class="col-lg-4 mb-4 wow fadeInUp" data-wow-delay="500ms" data-wow-duration="1500ms">
+					<div class="contact-info-box text-center">
+						<div class="contact-info-icon mx-auto">
+							<i class="fas fa-phone-alt"></i>
+						</div>
+						<h4 class="mb-3">Call Us</h4>
+						<p><a href="tel:+9779765728369">+977 9765728369</a></p>
+						<p class="mb-0"><a href="tel:+9779705728369">+977 9705728369</a></p>
+					</div>
+				</div>
+				
+				<div class="col-lg-4 mb-4 wow fadeInUp" data-wow-delay="700ms" data-wow-duration="1500ms">
+					<div class="contact-info-box text-center">
+						<div class="contact-info-icon mx-auto">
+							<i class="fas fa-envelope"></i>
+						</div>
+						<h4 class="mb-3">Email Us</h4>
+						<p><a href="mailto:info@biskirantechnologies.com">info@biskirantechnologies.com</a></p>
+						<p class="mb-0"><a href="mailto:contact@biskirantechnologies.com">contact@biskirantechnologies.com</a></p>
+					</div>
+				</div>
+			</div>
+			
+			<div class="row mt-5">
+				<div class="col-lg-4 mb-4 wow fadeInUp" data-wow-delay="300ms" data-wow-duration="1500ms">
+					<div class="contact-info-box text-center">
+						<div class="contact-info-icon mx-auto">
+							<i class="fab fa-facebook-f"></i>
+						</div>
+						<h4 class="mb-3">Facebook</h4>
+						<p><a href="https://www.facebook.com/biskirantechnologies" target="_blank">@biskirantechnologies</a></p>
+					</div>
+				</div>
+				
+				<div class="col-lg-4 mb-4 wow fadeInUp" data-wow-delay="500ms" data-wow-duration="1500ms">
+					<div class="contact-info-box text-center">
+						<div class="contact-info-icon mx-auto">
+							<i class="fab fa-linkedin-in"></i>
+						</div>
+						<h4 class="mb-3">LinkedIn</h4>
+						<p><a href="https://www.linkedin.com/company/biskirantechnologies" target="_blank">BisKIRAN TECHNOLOGIES</a></p>
+					</div>
+				</div>
+				
+				<div class="col-lg-4 mb-4 wow fadeInUp" data-wow-delay="700ms" data-wow-duration="1500ms">
+					<div class="contact-info-box text-center">
+						<div class="contact-info-icon mx-auto">
+							<i class="fab fa-instagram"></i>
+						</div>
+						<h4 class="mb-3">Instagram</h4>
+						<p><a href="https://www.instagram.com/biskirantechnologies/" target="_blank">@biskirantechnologies</a></p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+<!-- End of Contact Info section
+	============================================= -->
+
+<!-- Start of Contact Form section
+	============================================= -->	
+    
+    <section id="contact-form-section" class="bi-portfolio-section-2 position-relative">
+        
+		
+		<!-- Stars container -->
+		<div class="stars-container">
+			<!-- Regular stars -->
+			<div class="star star-1"></div>
+			<div class="star star-2"></div>
+			<div class="star star-3"></div>
+			<div class="star star-4"></div>
+			<div class="star star-5"></div>
+			<div class="star star-6"></div>
+			<div class="star star-7"></div>
+			<div class="star star-8"></div>
+			<div class="star star-9"></div>
+			<div class="star star-10"></div>
+			<div class="star star-11"></div>
+			<div class="star star-12"></div>
+			
+			<!-- Sparkle stars -->
+			<div class="star-sparkle sparkle-1"></div>
+			<div class="star-sparkle sparkle-2"></div>
+			<div class="star-sparkle sparkle-3"></div>
+			<div class="star-sparkle sparkle-4"></div>
+			<div class="star-sparkle sparkle-5"></div>
+			<div class="star-sparkle sparkle-6"></div>
+					<!-- Message bubbles with ripples -->
+			<div class="message-bubble message-bubble-1">
+				<span class="ripple"></span>
+				<span class="ripple ripple-2"></span>
+				<span class="ripple ripple-3"></span>
+				<div class="message-bubble-inner">
+					<i class="far fa-envelope"></i>
+				</div>
+			</div>
+			<div class="message-bubble message-bubble-2">
+				<span class="ripple"></span>
+				<span class="ripple ripple-2"></span>
+				<span class="ripple ripple-3"></span>
+				<div class="message-bubble-inner">
+					<i class="far fa-comment"></i>
+				</div>
+			</div>
+			<div class="message-bubble message-bubble-3">
+				<span class="ripple"></span>
+				<span class="ripple ripple-2"></span>
+				<span class="ripple ripple-3"></span>
+				<div class="message-bubble-inner">
+					<i class="far fa-paper-plane"></i>
+				</div>
+			</div>
+			<div class="message-bubble message-bubble-4">
+				<span class="ripple"></span>
+				<span class="ripple ripple-2"></span>
+				<span class="ripple ripple-3"></span>
+				<div class="message-bubble-inner">
+					<i class="far fa-envelope-open"></i>
+				</div>
+			</div>
+			<div class="message-bubble message-bubble-5">
+				<span class="ripple"></span>
+				<span class="ripple ripple-2"></span>
+				<span class="ripple ripple-3"></span>
+				<div class="message-bubble-inner">
+					<i class="far fa-comment-dots"></i>
+				</div>
+			</div>
+			
+			<!-- Social media flying icons -->
+			<div class="social-fly social-facebook">
+				<i class="fab fa-facebook-f"></i>
+			</div>
+			<div class="social-fly social-linkedin">
+				<i class="fab fa-linkedin-in"></i>
+			</div>
+			<div class="social-fly social-instagram">
+				<i class="fab fa-instagram"></i>
+			</div>
+			<div class="social-fly social-twitter">
+				<i class="fab fa-twitter"></i>
+			</div>
+			<div class="social-fly social-youtube">
+				<i class="fab fa-youtube"></i>
+			</div>
+			<div class="social-fly social-whatsapp">
+				<i class="fab fa-whatsapp"></i>
+			</div>
+		</div>
+		
+		<div class="container">
+			<div class="bi-section-title-2 text-center headline">
+				<div class="bi-subtitle text-uppercase wow fadeInRight" data-wow-delay="300ms" data-wow-duration="1500ms">
+					Get In Touch
+				</div>
+				<h2 class="headline-title">Send Us a
+					<span>Message</span>
+				</h2>
+			</div>
+			
+			<div class="row mt-5">
+				<div class="col-lg-10 mx-auto">					
+                    <div class="contact-form-wrapper modern-glass wow fadeInUp" data-wow-delay="400ms" data-wow-duration="1500ms">
+						<div class="glass-effect"></div>
+						<div class="glass-surface">
+							<div class="glass-reflection"></div>
+						</div>
+						<div class="contact-form-header">
+							<h3 class="mb-0">How can we help you?</h3>
+							<p class="mb-0">Fill out the form below, and we'll get back to you within 24 hours.</p>
+						</div><div class="contact-form">
+							<form action="mailto:info@biskirantechnologies.com" method="post" enctype="text/plain" class="modern-form">
+								<div class="row">
+									<div class="col-md-6">										<div class="form-group form-group-modern">
+											<div class="form-particles">
+												<span class="form-particle"></span>
+												<span class="form-particle"></span>
+												<span class="form-particle"></span>
+												<span class="form-particle"></span>
+											</div>
+											<label for="firstName">First Name</label>
+											<input type="text" id="firstName" class="form-control form-control-modern" placeholder="First Name" required>
+											<span class="focus-border"></span>
+											<i class="input-icon far fa-user"></i>
+										</div>
+									</div>
+									<div class="col-md-6">										<div class="form-group form-group-modern">
+											<div class="form-particles">
+												<span class="form-particle"></span>
+												<span class="form-particle"></span>
+												<span class="form-particle"></span>
+												<span class="form-particle"></span>
+											</div>
+											<label for="lastName">Last Name</label>
+											<input type="text" id="lastName" class="form-control form-control-modern" placeholder="Last Name" required>
+											<span class="focus-border"></span>
+											<i class="input-icon far fa-user"></i>
+										</div>
+									</div>
+								</div>
+										<div class="row">
+									<div class="col-md-6">										<div class="form-group form-group-modern">
+											<div class="form-particles">
+												<span class="form-particle"></span>
+												<span class="form-particle"></span>
+												<span class="form-particle"></span>
+												<span class="form-particle"></span>
+											</div>
+											<label for="phoneNumber">Phone Number</label>
+											<div class="input-group modern-input-group">
+												<div class="input-group-prepend">
+													<select class="form-control form-control-modern country-select" id="countryCode">
+														<option value="+977" selected>+977 (Nepal)</option>
+														<option value="+61">+61 (Australia)</option>
+														<option value="+1">+1 (USA/Canada)</option>
+														<option value="+44">+44 (UK)</option>
+														<option value="+91">+91 (India)</option>
+													</select>
+												</div>
+												<input type="tel" id="phoneNumber" class="form-control form-control-modern" placeholder="Phone Number">
+												<span class="focus-border"></span>
+												<i class="input-icon far fa-phone-alt"></i>
+											</div>
+										</div>
+									</div>
+									<div class="col-md-6">										<div class="form-group form-group-modern">
+											<div class="form-particles">
+												<span class="form-particle"></span>
+												<span class="form-particle"></span>
+												<span class="form-particle"></span>
+												<span class="form-particle"></span>
+											</div>
+											<label for="email">Email Address</label>
+											<input type="email" id="email" class="form-control form-control-modern" placeholder="Email Address" required>
+											<span class="focus-border"></span>
+											<i class="input-icon far fa-envelope"></i>
+										</div>
+									</div>
+								</div>
+										<div class="form-group form-group-modern">
+									<div class="form-particles">
+										<span class="form-particle"></span>
+										<span class="form-particle"></span>
+										<span class="form-particle"></span>
+										<span class="form-particle"></span>
+									</div>
+									<label for="service">Service</label>
+									<select class="form-control form-control-modern" id="service" required>
+										<option value="" selected disabled>Select Service</option>
+										<option value="Mobile App Development">Mobile App Development</option>
+										<option value="Web Development">Web Development</option>
+										<option value="Software Development">Software Development</option>
+										<option value="UI/UX Design">UI/UX Design</option>
+										<option value="Hire Dedicated Teams">Hire Dedicated Teams</option>
+										<option value="WordPress Development">WordPress Development</option>
+										<option value="Product Engineering">Product Engineering</option>
+										<option value="MVP Development">MVP Development</option>
+										<option value="SaaS Development">SaaS Development</option>
+										<option value="Cloud Services">Cloud Services</option>
+										<option value="E-Commerce Development">E-Commerce Development</option>
+										<option value="IT Consulting">IT Consulting</option>
+										<option value="Blockchain Development">Blockchain Development</option>
+										<option value="AI/ML Development">AI/ML Development</option>
+									</select>
+									<span class="focus-border"></span>
+									<i class="input-icon far fa-list-alt"></i>
+								</div>
+										<div class="form-group form-group-modern">
+									<div class="form-particles">
+										<span class="form-particle"></span>
+										<span class="form-particle"></span>
+										<span class="form-particle"></span>
+										<span class="form-particle"></span>
+									</div>
+									<label for="message">Your Message</label>
+									<textarea id="message" class="form-control form-control-modern" rows="5" placeholder="Leave us a message" required></textarea>
+									<span class="focus-border"></span>
+									<i class="input-icon far fa-comment-alt"></i>
+								</div>
+										<div class="form-group mb-4">
+									<div class="form-check modern-checkbox">
+										<input class="form-check-input" type="checkbox" id="terms" required>
+										<label class="form-check-label" for="terms">
+											Agree to our <a href="#" class="terms-link">Terms of Services</a> and <a href="#" class="terms-link">Privacy Policy</a>.
+										</label>
+									</div>
+								</div>
+										<div class="text-center">
+									<div class="bi-btn-2 bi-btn-area text-uppercase">
+										<button type="submit" class="bi-btn-main bi-btn-hover bi-btn-item modern-submit-btn">
+											<span class="btn-shine"></span>
+											<span class="btn-hover-effect"></span>
+											<span class="btn-glow"></span>
+											<span class="btn-particles">
+												<span class="btn-particle"></span>
+												<span class="btn-particle"></span>
+												<span class="btn-particle"></span>
+												<span class="btn-particle"></span>
+												<span class="btn-particle"></span>
+											</span>
+											<i class="far fa-paper-plane btn-icon"></i> 
+											Get in touch
+										</button>
+									</div>
+								</div>
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+<!-- End of Contact Form section
+	============================================= -->
+
+<!-- Start of Map section
+	============================================= -->
+    <span class="bi-side-shape shape_1 position-absolute"><img src="../assets/img/bg/shape_1.png" alt=""></span>
+	<section id="map-section" class="bi-about-section-2 position-relative">
+		<div class="container">
+			<div class="bi-section-title-2 text-center headline pera-content">
+				<div class="bi-subtitle text-uppercase wow fadeInRight" data-wow-delay="200ms" data-wow-duration="1000ms">
+					Our Locations
+				</div>
+				<h2 class="tx-split-text split-in-right">Global
+					<span>Presence</span>
+				</h2>
+			</div>
+			
+			<div class="map-wrapper wow fadeInUp" data-wow-delay="400ms" data-wow-duration="1500ms">
+				<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3532.4855768547257!2d85.32975851495902!3d27.700369482792326!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39eb199a06f00f7f%3A0xc5670a9173e161de!2sNew%20Baneshwor%2C%20Kathmandu%2044600!5e0!3m2!1sen!2snp!4v1595333981245!5m2!1sen!2snp" allowfullscreen></iframe>
+			</div>
+		</div>
+	</section>
+<!-- End of Map section
+	============================================= -->
+
+<!-- Start FAQ section
+	============================================= -->
+	<section id="bi-faq" class="bi-testimonial-section-2">
+		<div class="background_parallax" data-background="../assets/img/bg/faq-bg.jpg">
+			<div class="container">
+				<div class="bi-section-title-2 text-center headline">
+					<div class="bi-subtitle text-uppercase wow fadeInRight" data-wow-delay="300ms" data-wow-duration="1500ms">
+						Asked Questions
+					</div>
+					<h2 class="headline-title text-white">Frequently
+						<span>Asked Questions</span>
+					</h2>
+				</div>
+				
+				<div class="row mt-5">
+					<div class="col-lg-8 mx-auto">
+						<div class="accordion" id="faqAccordion">
+							<div class="accordion-item mb-4 wow fadeInUp" data-wow-delay="300ms" data-wow-duration="1500ms">
+								<h2 class="accordion-header">
+									<button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faq1">
+										What services does BisKIRAN TECHNOLOGIES offer?
+									</button>
+								</h2>
+								<div id="faq1" class="accordion-collapse collapse show" data-bs-parent="#faqAccordion">
+									<div class="accordion-body">
+										BisKIRAN TECHNOLOGIES offers a comprehensive range of services including Product Strategy & Innovation, Design & User Experience, Software Engineering, Data & AI Solutions, and Team Augmentation. We provide end-to-end product development services with deep expertise in AI, cloud, and healthtech.
+									</div>
+								</div>
+							</div>
+							
+							<div class="accordion-item mb-4 wow fadeInUp" data-wow-delay="400ms" data-wow-duration="1500ms">
+								<h2 class="accordion-header">
+									<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq2">
+										Where is BisKIRAN TECHNOLOGIES located?
+									</button>
+								</h2>
+								<div id="faq2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+									<div class="accordion-body">
+										BisKIRAN TECHNOLOGIES operates in both Nepal and Australia, providing a global perspective with local expertise. Our international presence allows us to blend cultural insights with global standards, delivering solutions that are technically robust and contextually relevant.
+									</div>
+								</div>
+							</div>
+							
+							<div class="accordion-item mb-4 wow fadeInUp" data-wow-delay="500ms" data-wow-duration="1500ms">
+								<h2 class="accordion-header">
+									<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq3">
+										How can I request a consultation?
+									</button>
+								</h2>
+								<div id="faq3" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+									<div class="accordion-body">
+										Requesting a consultation is easy! You can fill out our contact form on this page, email us directly at info@biskirantechnologies.com, or call us at +977 9765728369. Our team will get back to you within 24 hours to discuss your project needs and how we can help.
+									</div>
+								</div>
+							</div>
+							
+							<div class="accordion-item mb-4 wow fadeInUp" data-wow-delay="600ms" data-wow-duration="1500ms">
+								<h2 class="accordion-header">
+									<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq4">
+										What industries do you specialize in?
+									</button>
+								</h2>
+								<div id="faq4" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+									<div class="accordion-body">
+										We work across various industries including healthcare, fintech, e-commerce, education, and more. Our specialized focus on healthtech, AI, and cloud-based solutions enables us to deliver transformative digital solutions that drive growth, scalability, and innovation for businesses of all sizes.
+									</div>
+								</div>
+							</div>
+							
+							<div class="accordion-item wow fadeInUp" data-wow-delay="700ms" data-wow-duration="1500ms">
+								<h2 class="accordion-header">
+									<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq5">
+										How does your team augmentation service work?
+									</button>
+								</h2>
+								<div id="faq5" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+									<div class="accordion-body">
+										Our team augmentation service provides skilled professionals to complement your existing team and accelerate project delivery. We offer dedicated remote teams, agile team staffing, managed development resources, and onshore/offshore collaboration models tailored to your specific needs and project requirements.
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+<!-- End of FAQ section
+	============================================= -->
+
+<!-- Start CTA section
+	============================================= -->
+	<section id="bi-cta" class="bi-key-feature-section position-relative">
+		<!-- <span class="bi-side-shape shape_1 position-absolute"><img src="../assets/img/bg/shape_1.png" alt=""></span> -->
+		<div class="container">
+			<div class="row align-items-center">
+				<div class="col-lg-8 mx-auto text-center">
+					<div class="bi-section-title-2 headline pera-content mb-0">
+						<div class="bi-subtitle text-uppercase wow fadeInRight" data-wow-delay="200ms" data-wow-duration="1000ms">
+							Ready to Get Started?
+						</div>
+						<h2 class="tx-split-text split-in-right">Let's Create
+							<span>Something Amazing </span>
+						Together</h2>
+						<div class="bins-text wow fadeInUp" data-wow-delay="400ms" data-wow-duration="1500ms">
+							<p>Whether you have a specific project in mind or just want to explore possibilities, we're here to help you achieve your goals.</p>
+						</div>
+						<div class="bi-btn-2 bi-btn-area text-uppercase text-uppercase wow fadeInUp" data-wow-delay="600ms" data-wow-duration="1500ms">
+							<a class="bi-btn-main bi-btn-hover bi-btn-item" href="#contact-form-section"><span></span>Contact Us Today</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+<!-- End of CTA section
+	============================================= -->
+
+<!-- Start Footer section
+	============================================= -->
+	<footer id="bi-footer-2" class="bi-footer-section-2">
+		<div class="bi-footer-cta-2">
+			<div class="container">
+				<div class="bi-footer-cta-content-2 d-flex justify-content-between align-items-center">
+					<div class="bi-footer-cta-social-area d-flex align-items-center justify-content-between">
+						<div class="bi-footer-cta-text d-flex align-items-center">
+							<div class="inner-icon d-flex justify-content-center align-items-center">
+								<i class="fas fa-phone"></i>
+							</div>
+							<div class="inner-text">
+								<span>Give us a call</span>
+								<a href="tel:+9779765728369">+977 9765728369</a>
+							</div>
+						</div>
+						<div class="bi-footer-cta-social ul-li">
+							<ul>
+								<li><a href="https://www.instagram.com/biskirantechnologies/"> <i class="fab fa-instagram"></i></a></li>
+								<li><a href="https://www.linkedin.com/company/biskirantechnologies"> <i class="fab fa-linkedin-in"></i></a></li>
+								<li><a href="https://www.facebook.com/biskirantechnologies"> <i class="fab fa-facebook"></i></a></li>
+								<li><a href="#"> <i class="fab fa-youtube"></i></a></li>
+							</ul>
+						</div>
+					</div>
+					<div class="bi-footer-newslatter-form d-flex justify-content-between">
+						<span>Join 
+						Newsletter</span>
+						<div class="bi-footer-newslatter position-relative">
+							<form action="mailto:contact@biskirantechnologies.com" method="post" enctype="text/plain">
+								<input type="email" name="email" placeholder="Your email">
+								<button>Subscribe</button>
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="bi-footer-widget-content-2">
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-3">
+						<div class="bi-footer-widget-2">
+							<div class="logo-widget">
+								<div class="brand-logo">
+									<a href="#"><img src="../assets/img/logo/logo2.png" alt="BisKIRAN TECHNOLOGIES"></a>
+								</div>
+								<div class="logo-info">
+									BisKIRAN TECHNOLOGIES is a cutting-edge software and AI company under the prestigious BisKIRAN Group of Companies, proudly operating in both Nepal and Australia.
+								</div>
+								<div class="sponsor-logo">
+									<img src="../assets/img/logo/sp-logo.png" alt="BisKIRAN Group">
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="col-lg-3">
+						<div class="bi-footer-widget-2 headline ul-li-block">
+							<div class="menu-widget">
+								<h3 class="widget-title">Services</h3>
+								<ul>
+									<li><a href="#">Product Strategy & Innovation</a></li>
+									<li><a href="#">Design & User Experience</a></li>
+									<li><a href="#">Software Engineering</a></li>
+									<li><a href="#">Data & AI</a></li>
+								</ul>
+							</div>
+						</div>
+					</div>
+					<div class="col-lg-3">
+						<div class="bi-footer-widget-2 headline ul-li-block">
+							<div class="menu-widget">
+								<h3 class="widget-title">Company</h3>
+								<ul>									<li><a href="aboutus.html#bi-about-2">About Us</a></li>
+									<li><a href="aboutus.html#bi-biskiran-services">Our Expertise</a></li>
+									<li><a href="aboutus.html#bi-portfolio-2">Global Presence</a></li>
+									<li><a href="#">Careers</a></li>
+								</ul>
+							</div>
+						</div>
+					</div>
+					<div class="col-lg-3">
+						<div class="bi-footer-widget-2 headline ul-li-block">
+							<div class="menu-widget">
+								<h3 class="widget-title">Contact Us</h3>
+								<ul>
+									<li><a href="mailto:info@biskirantechnologies.com">info@biskirantechnologies.com</a></li>
+									<li><a href="mailto:contact@biskirantechnologies.com">contact@biskirantechnologies.com</a></li>
+									<li><a href="tel:+9779765728369">+977 9765728369</a></li>
+									<li><a href="tel:+9779705728369">+977 9705728369</a></li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="bi-footer-copyright-2">
+			<div class="container">				
+                <div class="bi-footer-copyright-content-2 text-center">
+					© Copyright 2025 BisKIRAN TECHNOLOGIES. All rights reserved.
+				</div>
+			</div>
+		</div>
+	</footer>
+<!-- End Footer section
+	============================================= -->
+
+	<!-- For Js Library -->	<script src="../assets/js/jquery-3.6.0.min.js"></script>
+	<script src="../assets/js/bootstrap.bundle.min.js"></script>
+	<script src="../assets/js/swiper-bundle.min.js"></script>
+	<script src="../assets/js/appear.js"></script>
+	<script src="../assets/js/counter.js"></script>
+	<script src="../assets/js/gsap.min.js"></script>
+	<script src="../assets/js/knob.js"></script>
+	<script src="../assets/js/jquery.counterup.min.js"></script>
+	<script src="../assets/js/jquery.magnific-popup.min.js"></script>
+	<script src="../assets/js/jquery.filterizr.js"></script>
+	<script src="../assets/js/imagesloaded.pkgd.min.js"></script>
+	<script src="../assets/js/jquery.marquee.min.js"></script>
+	<script src="../assets/js/jquery.meanmenu.min.js"></script>
+	<script src="../assets/js/parallax-scroll.js"></script>
+	<script src="../assets/js/parallax.min.js"></script>
+	<script src="../assets/js/tilt.jquery.min.js"></script>
+	<script src="../assets/js/hover-revel.js"></script>
+	<script src="../assets/js/waypoints.min.js"></script>
+	<script src="../assets/js/wow.min.js"></script>
+	<script src="../assets/js/ScrollSmoother.min.js"></script>
+	<script src="../assets/js/ScrollTrigger.min.js"></script>
+	<script src="../assets/js/ScrollToPlugin.min.js"></script>
+	<script src="../assets/js/split-type.min.js"></script>
+	<script src="../assets/js/SplitText.min.js"></script>
+	<script src="../assets/js/matter.min.js"></script>
+	<script src="../assets/js/script.js"></script>
+</body>
+</html>
