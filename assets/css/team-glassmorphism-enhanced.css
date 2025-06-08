@@ -1,0 +1,361 @@
+/*
+ * Team Glassmorphism Enhanced CSS
+ * 
+ * Enhanced glassmorphism design for the teams page with beautiful animations,
+ * floating effects, and stunning visual elements. This file includes styles
+ * for team cards, expertise cards, and various interactive elements.
+ */
+
+/* Base expertise card styling with glassmorphism effect */
+.expertise-card {
+    background: rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    border-radius: 20px;
+    padding: 40px 25px;
+    margin-bottom: 30px;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+    min-height: 240px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+}
+
+/* Expertise card hover effects */
+.expertise-card:hover {
+    transform: translateY(-10px) scale(1.02);
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.2);
+    border-color: rgba(67, 206, 242, 0.4);
+    background: rgba(255, 255, 255, 0.12);
+}
+
+/* Expertise card animated background */
+.expertise-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+        135deg,
+        rgba(67, 206, 242, 0.1) 0%,
+        rgba(108, 64, 249, 0.1) 100%
+    );
+    opacity: 0;
+    transition: opacity 0.4s ease;
+    z-index: -1;
+    border-radius: 20px;
+}
+
+.expertise-card:hover::before {
+    opacity: 1;
+}
+
+/* Expertise card icon styling */
+.expertise-icon {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #43CEF2 0%, #6C40F9 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 25px;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.4s ease;
+    box-shadow: 0 10px 30px rgba(67, 206, 242, 0.3);
+}
+
+.expertise-icon::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border-radius: 50%;
+    background: linear-gradient(45deg, rgba(255,255,255,0.2), transparent);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.expertise-card:hover .expertise-icon {
+    transform: rotateY(360deg) scale(1.1);
+    box-shadow: 0 15px 40px rgba(108, 64, 249, 0.4);
+}
+
+.expertise-card:hover .expertise-icon::before {
+    opacity: 1;
+}
+
+.expertise-icon i {
+    font-size: 32px;
+    color: #fff;
+    z-index: 2;
+    position: relative;
+    filter: drop-shadow(0 2px 4px rgba(0,0,0,0.3));
+}
+
+/* Expertise card title styling */
+.expertise-card h5 {
+    font-size: 20px;
+    font-weight: 600;
+    color: #fff;
+    margin-bottom: 15px;
+    text-align: center;
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+.expertise-card:hover h5 {
+    color: #43CEF2;
+    transform: translateY(-3px);
+}
+
+/* Expertise card description */
+.expertise-card p {
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.8);
+    text-align: center;
+    line-height: 1.6;
+    margin: 0;
+    transition: color 0.3s ease;
+}
+
+.expertise-card:hover p {
+    color: rgba(255, 255, 255, 0.95);
+}
+
+/* Floating animation for expertise cards */
+@keyframes expertiseFloat {
+    0%, 100% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(-8px);
+    }
+}
+
+.expertise-card:nth-child(odd) {
+    animation: expertiseFloat 4s ease-in-out infinite;
+}
+
+.expertise-card:nth-child(even) {
+    animation: expertiseFloat 4s ease-in-out infinite reverse;
+    animation-delay: 2s;
+}
+
+/* Sparkle effect for expertise cards */
+.expertise-card::after {
+    content: '';
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    width: 4px;
+    height: 4px;
+    background: #43CEF2;
+    border-radius: 50%;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    box-shadow: 
+        10px 10px 0 rgba(67, 206, 242, 0.8),
+        20px 5px 0 rgba(108, 64, 249, 0.6),
+        15px 25px 0 rgba(67, 206, 242, 0.4);
+}
+
+.expertise-card:hover::after {
+    opacity: 1;
+    animation: sparkleRotate 2s linear infinite;
+}
+
+@keyframes sparkleRotate {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Enhanced team cards (existing team member cards) */
+.bi-team-item-2 {
+    position: relative;
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 25px;
+    padding: 30px 20px;
+    transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+    overflow: hidden;
+}
+
+.bi-team-item-2::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        135deg,
+        rgba(67, 206, 242, 0.08) 0%,
+        rgba(108, 64, 249, 0.08) 100%
+    );
+    opacity: 0;
+    transition: opacity 0.4s ease;
+    border-radius: 25px;
+}
+
+.bi-team-item-2:hover {
+    transform: translateY(-15px) scale(1.03);
+    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.2);
+    border-color: rgba(67, 206, 242, 0.4);
+}
+
+.bi-team-item-2:hover::before {
+    opacity: 1;
+}
+
+/* Team image enhancements */
+.bi-team-img {
+    position: relative;
+    overflow: hidden;
+    border-radius: 20px;
+    transition: transform 0.4s ease;
+}
+
+.bi-team-item-2:hover .bi-team-img {
+    transform: scale(1.05);
+}
+
+.bi-team-img img {
+    transition: filter 0.4s ease;
+}
+
+.bi-team-item-2:hover .bi-team-img img {
+    filter: brightness(1.1) contrast(1.1);
+}
+
+/* Social media icons enhancement */
+.bi-team-social ul li a {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.bi-team-social ul li a::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(45deg, #43CEF2, #6C40F9);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.bi-team-social ul li a:hover {
+    transform: translateY(-3px) scale(1.1);
+    box-shadow: 0 8px 20px rgba(67, 206, 242, 0.4);
+}
+
+.bi-team-social ul li a:hover::before {
+    opacity: 1;
+}
+
+.bi-team-social ul li a i {
+    position: relative;
+    z-index: 2;
+    transition: color 0.3s ease;
+}
+
+.bi-team-social ul li a:hover i {
+    color: #fff;
+}
+
+/* Responsive adjustments for expertise cards */
+@media (max-width: 768px) {
+    .expertise-card {
+        padding: 30px 20px;
+        min-height: 200px;
+    }
+    
+    .expertise-icon {
+        width: 60px;
+        height: 60px;
+        margin-bottom: 20px;
+    }
+    
+    .expertise-icon i {
+        font-size: 24px;
+    }
+    
+    .expertise-card h5 {
+        font-size: 18px;
+    }
+    
+    .expertise-card p {
+        font-size: 13px;
+    }
+}
+
+/* Particle background for the expertise section */
+#bi-team-expertise {
+    position: relative;
+    overflow: hidden;
+}
+
+#bi-team-expertise::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: 
+        radial-gradient(circle at 20% 20%, rgba(67, 206, 242, 0.1) 0%, transparent 50%),
+        radial-gradient(circle at 80% 80%, rgba(108, 64, 249, 0.1) 0%, transparent 50%),
+        radial-gradient(circle at 60% 40%, rgba(67, 206, 242, 0.05) 0%, transparent 50%);
+    z-index: -1;
+    animation: particleMove 20s ease-in-out infinite alternate;
+}
+
+@keyframes particleMove {
+    0% {
+        transform: translateX(0) translateY(0);
+    }
+    33% {
+        transform: translateX(20px) translateY(-10px);
+    }
+    66% {
+        transform: translateX(-15px) translateY(15px);
+    }
+    100% {
+        transform: translateX(10px) translateY(-5px);
+    }
+}
+
+/* Staggered animation delays for expertise cards */
+.col-lg-4:nth-child(1) .expertise-card {
+    animation-delay: 0s;
+}
+
+.col-lg-4:nth-child(2) .expertise-card {
+    animation-delay: 1s;
+}
+
+.col-lg-4:nth-child(3) .expertise-card {
+    animation-delay: 2s;
+}
+
+.col-lg-4:nth-child(4) .expertise-card {
+    animation-delay: 0.5s;
+}
+
+.col-lg-4:nth-child(5) .expertise-card {
+    animation-delay: 1.5s;
+}
+
+.col-lg-4:nth-child(6) .expertise-card {
+    animation-delay: 2.5s;
+}
